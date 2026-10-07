@@ -1,0 +1,23 @@
+sas-theme-kit
+
+This repository includes unmodified copies of third-party example code,
+used only as test fixtures:
+
+  test_apps/streamlit_hello/{streamlit_app,hello,dataframe_demo,plotting_demo,
+    mapping_demo,animation_demo}.py
+    Copyright (c) Streamlit Inc. (2018-2022) Snowflake Inc. (2022-2026)
+    https://github.com/streamlit/streamlit/tree/develop/lib/streamlit/hello
+
+  test_apps/nyc_uber/streamlit_app.py
+    Copyright 2018-2022 Streamlit Inc.
+    https://github.com/streamlit/demo-uber-nyc-pickups
+
+Both are licensed under the Apache License, Version 2.0:
+https://www.apache.org/licenses/LICENSE-2.0
+
+The *_sas.py and *_bad_conversion.py files are modified versions of those
+files; the modifications are described in a header comment in each file.
+
+The SAS logos under src/sas_theme/assets/sas-brand/ and the PowerPoint
+template under brand-source/ are SAS Institute Inc. brand assets, included
+for internal use.

@@ -1,0 +1,35 @@
+/*
+ * SAS design tokens as CSS custom properties.
+ *
+ * Framework-neutral: link or inline this in Dash, Shiny, Gradio, Flask
+ * templates, etc. to use the same colors as the Streamlit theme.
+ * Values must match themes/sas-light.toml (tests/test_tokens.py checks).
+ *
+ * Source: brand-source/approved SAS external PowerPoint template.pptx, slide 5.
+ */
+:root {
+  /* Core (mirrors the Streamlit [theme] keys) */
+  --sas-primary: #0766D1;            /* primaryColor */
+  --sas-background: #FFFFFF;         /* backgroundColor */
+  --sas-secondary-background: #F0F1F4; /* secondaryBackgroundColor */
+  --sas-text: #000000;               /* textColor */
+  --sas-link: #0766D1;               /* linkColor */
+  --sas-border: #B9C0C8;             /* borderColor */
+
+  /* Extended palette */
+  --sas-blue: #0766D1;
+  --sas-teal: #29D5CD;
+  --sas-purple: #6C69FF;
+  --sas-green: #15B57A;
+  --sas-yellow: #FFCC31;
+  --sas-magenta: #85124F;
+  --sas-bright-blue: #33A2FF;
+  --sas-navy: #032953;
+  --sas-slate: #7D879A;
+  --sas-pale-blue: #C4DEFC;
+
+  /* Kit-specific (accessibility-adjusted, not from the template) */
+  --sas-muted-text: #5A6170;         /* 6.2:1 on white, 5.5:1 on #F0F1F4 */
+
+  --sas-font: "Anova", Arial, "Helvetica Neue", sans-serif;
+}

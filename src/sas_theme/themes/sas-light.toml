@@ -1,0 +1,64 @@
+# SAS light theme for Streamlit (requires Streamlit >= 1.51).
+#
+# This is the single source of truth for the theme. Apps don't copy these
+# values; they point at this file:
+#
+#   * zero-touch:   sas-theme run app.py
+#   * per app:      [theme] base = "<path or URL to this file>"
+#                   in the app's .streamlit/config.toml
+#
+# Any [theme] key the app sets in its own config.toml overrides the value
+# here (that's Streamlit's documented behavior for theme files).
+#
+# Values come from brand-source/approved SAS external PowerPoint
+# template.pptx, slide 5 ("HOW TO USE SAS COLORS"). If you change a color
+# here, change the matching variable in tokens/sas-tokens.css too;
+# tests/test_tokens.py fails if they drift apart.
+
+[theme]
+base = "light"
+
+primaryColor = "#0766D1"             # SAS Blue: "start with the SAS blue"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F1F4" # pale grey panel color from slide 5
+textColor = "#000000"
+linkColor = "#0766D1"
+borderColor = "#B9C0C8"              # light grey rule color from slide 5
+
+# Charts (Plotly / Altair / Vega-Lite) use the template's palette, in the
+# order: SAS Blue first, then the "shape" colors from slide 5.
+# Confirm ordering with the brand owner if charts are externally visible.
+chartCategoricalColors = [
+    "#0766D1", # SAS Blue
+    "#29D5CD", # teal
+    "#6C69FF", # purple
+    "#15B57A", # green
+    "#FFCC31", # yellow
+    "#85124F", # magenta
+    "#33A2FF", # bright blue
+    "#032953", # navy
+    "#7D879A", # slate
+    "#C4DEFC", # pale blue
+]
+
+font = "sans-serif"
+
+# --- Brand font (open item) -------------------------------------------------
+# The template specifies "Anova", but no font file ships with it. Once you
+# have licensed web-font files, host them (any HTTPS URL, or an app's
+# static/ folder with server.enableStaticServing = true) and uncomment:
+#
+# font = "Anova, sans-serif"
+# headingFont = "Anova, sans-serif"
+#
+# [[theme.fontFaces]]
+# family = "Anova"
+# url = "https://<your-host>/fonts/Anova-Regular.woff2"
+# weight = 400
+# style = "normal"
+#
+# [[theme.fontFaces]]
+# family = "Anova"
+# url = "https://<your-host>/fonts/Anova-Bold.woff2"
+# weight = 700
+# style = "normal"

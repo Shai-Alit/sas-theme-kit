@@ -1,0 +1,9 @@
+# The legacy app's own config. The [theme] keys below override the SAS theme
+# when you run from this folder; `sas-theme run` should warn about each one.
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+primaryColor = "#FF4500"
+secondaryBackgroundColor = "#FFF3E0"

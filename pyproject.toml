@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sas-theme-kit"
+version = "0.3.0"
+description = "SAS look-and-feel for Streamlit apps: shared theme file, banner, footer, and a style-only change checker."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    # 1.51 added reusable theme files (theme.base = path/URL), which the
+    # zero-touch `sas-theme run` flow depends on.
+    "streamlit>=1.51",
+    "tomli>=1.1; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "build"]
+demos = ["altair", "pydeck", "pandas", "numpy"]
+
+[project.scripts]
+sas-theme = "sas_theme.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sas_theme*"]
+
+[tool.setuptools.package-data]
+sas_theme = [
+    "assets/*.svg",
+    "assets/sas-brand/*",
+    "themes/*.toml",
+    "tokens/*.css",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
